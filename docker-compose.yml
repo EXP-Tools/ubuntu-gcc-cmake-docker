@@ -1,0 +1,26 @@
+version: '2'
+services:
+  ubuntu18:
+    hostname: ubuntu_18
+    container_name: ubuntu_18
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    stdin_open: true
+    tty: true
+    privileged: true
+    entrypoint: ["/bin/bash"]
+    networks: 
+      vpn:
+        ipv4_address: 172.168.23.2
+    restart: on-failure
+
+  
+networks:
+  vpn:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet:  172.168.23.0/24
+          gateway: 172.168.23.1

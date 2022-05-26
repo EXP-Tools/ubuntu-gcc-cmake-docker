@@ -23,3 +23,7 @@ RUN cd /tmp && \
     make install && \
     cd .. && \
     rm -rf cmake-*
+
+
+RUN echo "alias ll='ls -l'" >> /root/.bashrc
+ENTRYPOINT [ "/bin/bash" ]

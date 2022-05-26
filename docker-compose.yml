@@ -10,6 +10,8 @@ services:
     tty: true
     privileged: true
     entrypoint: ["/bin/bash"]
+    volumes:
+      - ./workspace:/workspace
     networks: 
       vpn:
         ipv4_address: 172.168.23.2

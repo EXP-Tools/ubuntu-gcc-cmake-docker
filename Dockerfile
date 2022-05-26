@@ -25,5 +25,6 @@ RUN cd /tmp && \
     rm -rf cmake-*
 
 
+WORKDIR /workspace
 RUN echo "alias ll='ls -l'" >> /root/.bashrc
 ENTRYPOINT [ "/bin/bash" ]

@@ -21,3 +21,5 @@
   - 运行容器：[`bin/run.sh`](./bin/run.sh) 或 [`bin/run.ps1`](./bin/run.ps1)
   - 停止容器：[`bin/stop.sh`](./bin/stop.sh) 或 [`bin/stop.ps1`](./bin/stop.ps1)
 
+
+> 最新镜像已发布到 docker hub : [`docker pull expm02/ubuntu-gcc-cmake-docker:latest`](https://hub.docker.com/r/expm02/ubuntu-gcc-cmake-docker)

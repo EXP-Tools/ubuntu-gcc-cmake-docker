@@ -14,7 +14,7 @@
 
 1. 首次使用时在系统安装 [git](https://git-scm.com/)、 [docker](https://www.docker.com/) 和 [docker-compose](https://docs.docker.com/compose/install/)
 2. 拉取此仓库到本地任意位置 `git clone https://github.com/lyy289065406/ubuntu-gcc-cmake-docker`
-4. [`bin`](./bin) 目录下为 docker 脚本，`*.sh` 为 linux/mac 脚本，`*.ps1` 为 windows 脚本，按需选用即可：
+4. [`bin`](./bin) 目录下为 docker 操作脚本，`*.sh` 为 linux/mac 脚本，`*.ps1` 为 windows 脚本，按需选用即可：
   - 清理镜像：[`bin/clean.sh`](./bin/clean.sh) 或 [`bin/clean.ps1`](./bin/clean.ps1)
   - 构建镜像：[`bin/build.sh`](./bin/build.sh) 或 [`bin/clean.ps1`](./bin/build.ps1) （首次执行耗时较长）
   - 发布镜像：[`bin/deploy.sh`](./bin/deploy.sh) 或 [`bin/deploy.ps1`](./bin/deploy.ps1) （如需发布到自己的空间请修改 `NAMESPACE`）

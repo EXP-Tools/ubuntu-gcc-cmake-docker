@@ -1,8 +1,9 @@
-MAINTAINER EXP
 FROM ubuntu:18.04
+MAINTAINER EXP
 
 RUN apt-get clean && \
-    apt-get update -y
+    apt-get update -y && \
+    apt-get upgrade -y
 
 # 安装系统必要组件
 RUN apt-get install -y python3 python3-pip wget

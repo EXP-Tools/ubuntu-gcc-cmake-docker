@@ -6,7 +6,7 @@ RUN apt-get clean && \
     apt-get upgrade -y
 
 # 安装系统必要组件
-RUN apt-get install -y python3 python3-pip wget
+RUN apt-get install -y python3 python3-pip wget git
 
 # 安装 gcc/g++ 编译套件
 RUN apt-get install -y build-essential

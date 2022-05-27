@@ -11,7 +11,7 @@ VERSION=$(date "+%s")
 function deploy_image() {
     image_name=$1
     remote_url=${NAMESPACE}/${image_name}
-    docker tag ${image_name} ${remote_url}:${VERSION}
+    docker tag ${image_name} ${remote_url}:${VERSION}-mac
     docker push ${remote_url}:${VERSION}
     docker tag ${image_name} ${remote_url}:latest
     docker push ${remote_url}:latest

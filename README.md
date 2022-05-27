@@ -1,11 +1,11 @@
 # ubuntu-gcc-cmake-docker
-> ubuntu 18.04 + gcc 7.5.0 + cmake 3.16.0
+> ubuntu 18.04 + gcc 9.4.0 + cmake 3.16.0
 
 ------
 
 ## 说明
 
-这是集成了 ![](https://img.shields.io/badge/ubuntu|18.04-brightgreen.svg) ![](https://img.shields.io/badge/gcc|7.5.0-brightgreen.svg) ![](https://img.shields.io/badge/cmake|3.16.0-brightgreen.svg) 的 docker 镜像。
+这是集成了 ![](https://img.shields.io/badge/ubuntu|20.04-brightgreen.svg) ![](https://img.shields.io/badge/gcc|9.4.0-brightgreen.svg) ![](https://img.shields.io/badge/cmake|3.16.0-brightgreen.svg) 的 docker 镜像。
 
 > 因 gcc 环境安装耗时极长，故这主要是为了编译加速而设
 

@@ -1,8 +1,8 @@
 version: '2'
 services:
   ubuntu18:
-    hostname: ubuntu_18
-    container_name: ubuntu_18
+    hostname: ubuntu_20
+    container_name: ubuntu_20
     build:
       context: .
       dockerfile: ./Dockerfile

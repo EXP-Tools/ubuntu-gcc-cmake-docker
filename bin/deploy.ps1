@@ -10,8 +10,9 @@ $VERSION = Get-Date -format "yyMMddHH"
 
 function deploy_image([string]$image_name) {
     $remote_url = "${NAMESPACE}/${image_name}"
-    docker tag ${image_name} ${remote_url}
+    docker tag ${image_name} "${remote_url}:${VERSION}-win"
     docker push "${remote_url}:${VERSION}-win"
+    docker tag ${image_name} "${remote_url}:latest"
     docker push "${remote_url}:latest"
     Write-Host "Pushed to ${remote_url}"
 }

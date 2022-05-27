@@ -12,7 +12,7 @@ function deploy_image() {
     image_name=$1
     remote_url=${NAMESPACE}/${image_name}
     docker tag ${image_name} ${remote_url}:${VERSION}-mac
-    docker push ${remote_url}:${VERSION}
+    docker push ${remote_url}:${VERSION}-mac
     docker tag ${image_name} ${remote_url}:latest
     docker push ${remote_url}:latest
     echo "Pushed to ${remote_url}"

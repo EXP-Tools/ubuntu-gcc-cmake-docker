@@ -5,6 +5,19 @@ RUN apt-get clean && \
     apt-get update -y && \
     apt-get upgrade -y
 
+# 校准服务器时间
+ENV TZ=Asia/Shanghai
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+RUN apt-get install tzdata
+
+# 安装系统 GBK 和 UTF-8 中文语言包
+RUN apt-get install -y language-pack-zh-hans language-pack-zh-hans-base \
+                    language-pack-gnome-zh-hans language-pack-gnome-zh-hans-base
+RUN apt-get install -y locales && \
+    echo 'zh_CN.GBK GBK' >> /etc/locale.gen && \
+    echo 'zh_CN.UTF-8 UTF-8' >> /etc/locale.gen && \
+    locale-gen
+
 # 安装系统必要组件
 RUN apt-get install -y python3 python3-pip wget git
 

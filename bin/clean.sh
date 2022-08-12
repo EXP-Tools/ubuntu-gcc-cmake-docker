@@ -1,10 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 # ------------------------
 # 清理镜像
 # bin/clean.sh
 # ------------------------
 
-function del_image() {
+function del_image {
   image_name=$1
   image_id=`docker images -q --filter reference=${image_name}`
   if [ ! -z "${image_id}" ]; then
@@ -21,5 +21,5 @@ del_image ${image_name}
 docker image ls | grep "${image_name}"
 
 echo "clean logs ..."
-rm -rf ./logs
+rm -rf ./volumes/ro/logs
 echo "finish ."

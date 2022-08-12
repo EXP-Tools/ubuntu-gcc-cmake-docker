@@ -18,5 +18,5 @@ $image_name = (Split-Path $pwd -leaf)
 del_image -image_name ${image_name}
 
 Write-Host "clean logs ..."
-Remove-Item ./logs -Recurse -Force
+Remove-Item ./volumes/ro/logs -Recurse -Force
 Write-Host "finish ."

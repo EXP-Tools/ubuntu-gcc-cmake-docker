@@ -16,6 +16,7 @@ RUN apt-get install -y language-pack-zh-hans language-pack-zh-hans-base \
 RUN apt-get install -y locales && \
     echo 'zh_CN.GBK GBK' >> /etc/locale.gen && \
     echo 'zh_CN.UTF-8 UTF-8' >> /etc/locale.gen && \
+    echo "LANG=zh_CN.UTF-8" >> /etc/environment && \
     locale-gen
 
 # 安装系统必要组件

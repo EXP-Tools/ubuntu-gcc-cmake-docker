@@ -21,6 +21,8 @@ RUN apt-get install -y locales && \
 
 # 安装系统必要组件
 RUN apt-get install -y python3 python3-pip wget git
+RUN ln -s /usr/bin/python3 /usr/bin/python
+RUN python -m pip install --upgrade pip
 
 # 安装 gcc/g++ 编译套件
 RUN apt-get install -y build-essential

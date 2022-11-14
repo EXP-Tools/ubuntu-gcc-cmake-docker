@@ -20,8 +20,8 @@ RUN apt-get install -y locales && \
     locale-gen
 
 # 安装系统必要组件
-RUN apt-get install -y curl vim zip unzip net-tools cron logrotate rsyslog
-RUN apt-get install -y python3 python3-pip wget git
+RUN apt-get install -y curl wget vim zip unzip git net-tools cron logrotate rsyslog
+RUN apt-get install -y python3 python3-pip
 RUN ln -s /usr/bin/python3 /usr/bin/python
 RUN python -m pip install --upgrade pip
 

@@ -46,5 +46,5 @@ RUN cd /tmp && \
     rm -rf cmake-*
 
 
-RUN echo "alias ll='ls -al'" >> /root/.bashrc
+RUN echo "alias ll='ls -alF'" >> /root/.bashrc
 ENTRYPOINT [ "/bin/bash" ]

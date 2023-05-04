@@ -1,5 +1,5 @@
 # ubuntu-gcc-cmake-docker
-> ubuntu 18.04 + gcc 9.4.0 + cmake 3.16.0
+> ubuntu 20.04 + gcc 9.4.0 + cmake 3.16.0
 
 ------
 
